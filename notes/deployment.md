@@ -102,6 +102,10 @@ the `--zk` option is the connection information for ZooKeeper;
 finally the `--quorum` option is required when using ZooKeeper,
 and when using only one master process should be set to `1`.
 
+Note: if the machine is only addressable through a different IP address,
+e.g. it is behind a NAT, you need to add `--advertise_ip=172.0.0.1`
+with the IP that the agent should use to connect to the master.
+
 ### Marathon
 
 The last step on the Linux machine is launch Marathon.
