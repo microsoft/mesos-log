@@ -40,3 +40,22 @@ e.g. `--gtest_filter="*DefaultExecutorTest*.*"`.
 
 Visual Studio will close the console window in which the tests were ran,
 but you can add a break point to the last line of the `main` function to keep it open.
+
+Handles
+-------
+
+The Windows API is flawed and has multiple invalide semantic values for the `HANDLE` type,
+i.e. some APIs return `-1` or `INVALID_HANDLE_VALUE`, and other APIs return `nullptr`.
+It is simply [inconsistent](https://blogs.msdn.microsoft.com/oldnewthing/20040302-00/?p=40443),
+and so developers must take extra caution when checking handles returned from the Windows APIs,
+double check against the documentation which value will indicate it is invalid.
+
+Using raw handles (or indeed raw pointers anywhere) in C++ is treachorous.
+Mesos has a `SafeHandle` class which should be used immediately when obtaining a `HANDLE`
+from a Windows API, with the deleter likely set to `::CloseHandle`.
+
+TODO(andschwa):
+* examples
+* hashset/hashmap
+* try/option and operators
+* style
