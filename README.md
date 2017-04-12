@@ -5,6 +5,7 @@ This repository is meant to help coordinate Microsoft's Mesos core team. It serv
 ## Quick links
 
 * [Issue Dashboard][issues]
+* [Unassigned Windows issues][https://issues.apache.org/jira/browse/MESOS-3246?filter=12340579]
 * [Mesos on Windows Epic][windows epic]
 * [CMake Build System Epic][cmake epic]
 * [Windows Agent Tests Epic][agent tests epic]
