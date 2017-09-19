@@ -76,7 +76,7 @@ e.g. `--gtest_filter="*DefaultExecutorTest*.*"`.
 Visual Studio will close the console window in which the tests were ran,
 but you can add a break point to the last line of the `main` function to keep it open.
 
-When running unit tests, you will want to set in your environment `GLOV_v=3` ,
+When running unit tests, you will want to set in your environment `GLOG_v=3` ,
 and pass `--verbose` to the test runner. This will enable all the log output.
 
 Handles
