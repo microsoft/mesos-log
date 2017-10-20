@@ -2,6 +2,8 @@
 
 This repository is meant to help coordinate Microsoft's Mesos core team. It serves as a reference for useful resources (useful for onboarding, _etc_.), as well as a log of progress and plans week-to-week.
 
+__Please note that this log is out-of-date as I have switched to using JIRA exclusively.__
+
 ## Quick links
 
 * [Issue Dashboard][issues]
@@ -32,8 +34,8 @@ New developers should:
   * NOTE: because Windows doesn't have a package manager, our build system will download some of the Mesos dependencies from a canonical resource [here](https://github.com/3rdparty/mesos-3rdparty). If you accidentally trigger a rebuild of one of those, CMake may try to download those repositories, which can be particularly annoying if you're somewhere without an Internet connection. To prevent this, you should point CMake at a local copy of htis repository: just `git clone` that URL, and configure pass the flag `-D3RDPARTY_DEPENDENCIES=[path to repo]`, and CMake will get the tarballs from there instead.
 * Create community accounts with directions [here](http://mesos.apache.org/community/). Specifically:
   * Sign up for the dev@ and user@ lists.
-  * Create an account on the Mesos Slack, join the #windows and #cmake channels. (Post general dev questions to #dev rather than #general, as #general is more for user questions.) Ping me (@hausdorff) when you get there if you want a friendly face.
-  * Create accounts with the Mesos instances of JIRA (bug tracking), and Review Board (code reviews).
+  * Create an account on the Mesos Slack, join the #windows and #cmake channels. (Post general dev questions to #dev rather than #general, as #general is more for user questions.) Ping me (@andschwa) when you get there if you want a friendly face.
+  * Create accounts with the Mesos instances of JIRA (bug tracking), and Review Board (code reviews). Please use the same handle.
   * NOTE: If you want to retain these emails in the event you eventually leave Microsoft, you might consider using your personal email rather than your @microsoft email. Since it's all open source anyway, these emails won't contain business-sensitive information.
 
 ### Submitting a patch
